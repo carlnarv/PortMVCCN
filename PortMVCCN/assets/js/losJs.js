@@ -82,8 +82,106 @@ $(document).ready(function () {
     });
 
 });
+var baseUrl = window.location.protocol + "//" + window.location.host + "/"
+//CrazyNumbers hover effect
+$(function () {
+    $('#CrazyNum').hover(function () {
+        $('#CrazyNum').attr('src', baseUrl + 'assets/images/JavascriptLogo.jpg');
+    },
+    function () {
+        $('#CrazyNum').attr('src', baseUrl + 'assets/images/crzyNum2.png')
+        $('#CrazyNum img').css({ 'width': '300px', 'height': '210px' });
 
+    })
+})
+//AvShow hover effect
+$(function ()
+{
+    $('#showReady').hover(function ()
+    {
+        $('#showReady').attr('src', baseUrl + 'assets/images/mobile-app.png');
+    },
+    function()
+    {
+        $('#showReady').attr('src', baseUrl + 'assets/images/Show.png');
+        $('#showReady img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
+
+//FizzBuzz hover effect
+$(function () {
+    $('#FizzBuzzHover').hover(function ()
+    {
+        $('#FizzBuzzHover').attr('src', baseUrl + 'assets/images/JavascriptLogo.jpg');
+    },
+    function () {
+        $('#FizzBuzzHover').attr('src', baseUrl + 'assets/images/PIC-fizzbuzz.png');
+        $('#FizzBuzzHover img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
+
+//Fact hover effect
+$(function () {
+    $('#FactHover').hover(function () {
+        $('#FactHover').attr('src', baseUrl + 'assets/images/JavascriptLogo.jpg');
+    },
+    function () {
+        $('#FactHover').attr('src', baseUrl + 'assets/images/Factorial.png');
+        $('#FactHover img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
+        
+//Blog hover effect
+$(function () {
+    $('#blogHover').hover(function () {
+        $('#blogHover').attr('src', baseUrl + 'assets/images/rsz_net.png');
+    },
+    function () {
+        $('#blogHover').attr('src', baseUrl + 'assets/images/Blog.jpg');
+        $('#blogHover img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
+//Financial planner hover effect
+$(function () {
+    $('#finPlHover').hover(function () {
+        $('#finPlHover').attr('src', baseUrl + 'assets/images/rsz_net.png');
+    },
+    function () {
+        $('#finPlHover').attr('src', baseUrl + 'assets/images/Money.jpg');
+        $('#finPlHover img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
+
+$(function () {
+    $('#carFinHover').hover(function () {
+        $('#carFinHover').attr('src', baseUrl + 'assets/images/rsz_net.png');
+    },
+    function () {
+        $('#carFinHover').attr('src', baseUrl + 'assets/images/carfinder.jpg');
+        $('#carFinHover img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
+//Pallindrome hover effect
+$(function () {
+    $('#PalHover').hover(function () {
+        $('#PalHover').attr('src', baseUrl + 'assets/images/JavascriptLogo.jpg');
+    },
+    function () {
+        $('#PalHover').attr('src', baseUrl + 'assets/images/Publication1.png');
+        $('#PalHover img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
     
+//BugTracker hover effect
+$(function () {
+    $('#bugTrHover').hover(function () {
+        $('#bugTrHover').attr('src', baseUrl + 'assets/images/JavascriptLogo.jpg');
+    },
+    function () {
+        $('#bugTrHover').attr('src', baseUrl + 'assets/images/bugs.png');
+        $('#bugTrHover img').css({ 'width': '300px', 'height': '210px' });
+    })
+})
 
     //Fizz Buzz Code section ---------------------------
     function results() {
