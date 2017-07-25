@@ -188,23 +188,23 @@ $(function () {
         var num1 = $("#num1").val();
         var num2 = $("#num2").val();
         var results = "";
-        if (Math.round(num1) > 100 || Math.round(num2) > 100) {
+        if (Math.round(num1) > 100 || Math.round(num2) > 100 || Math.round(num1) < 1 || Math.round(num2) < 1) {
             alert("Enter in a number from 1 - 100 please");
             clearpg()
             return false;
         } else
             for (i = 1; i <= 100; i++) {
                 if (i % Number(num1) == 0 && i % Number(num2) == 0) {
-                    results = results + ", FizzBuzz ";
+                    results = results + " FizzBuzz,";
                 }
                 else if (i % Number(num1) == 0) {
-                    results = results + " Fizz ";
+                    results = results + " Fizz,";
                 }
                 else if (i % Number(num2) == 0) {
-                    results = results + " Buzz ";
+                    results = results + " Buzz,";
                 }
                 else {
-                    results = results + i + " ";
+                    results = results + i + ",";
                 }
 
             }

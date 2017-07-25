@@ -174,6 +174,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,6 +267,7 @@
     <Content Include="assets\fonts\FontAwesome.otf" />
     <Content Include="assets\images\CN Resume IT_5.docx" />
     <Content Include="assets\images\CN Resume IT_5 .pdf" />
+    <Content Include="private.config" />
     <None Include="Properties\PublishProfiles\cnarvaez-portfolio - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\cnarvaez-portfolio - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\cnarvaez-portfolio - Web Deploy %282%29.pubxml" />
@@ -328,7 +330,9 @@
     <Content Include="Scripts\SyntaxHighlighter\styles\shThemeRDark.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Writing well designed, testable, efficient code by using best software development practices.Creating website layout/user interfaces by using standard HTML/CSS practices. Integrating data from various back-end services and databases">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>@ViewBag.Title CNarvaez Portfolio</title>
     
     @Scripts.Render("~/bundles/modernizr")
@@ -23,6 +24,8 @@
     <link href="~/Content/Site.css" rel="stylesheet" />
     <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" />
     <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css" rel="stylesheet" />
+
 
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
@@ -61,6 +64,10 @@
                     <li>
                         <a href="#contact"><i class="fa fa-comments-o"></i> Contact Me</a>
                     </li>
+                    <li>
+                        <a href="http://cnarvaez-blog.azurewebsites.net/" target="_blank"><i class="fa fa-rss"></i>Blog</a>
+                    </li>
+
                 </ul>
             </div>
 
@@ -68,7 +75,7 @@
 
     </div>
 
-    
+
     @RenderBody()
     <hr />
     <footer id="main-footer">
@@ -88,7 +95,7 @@
         </div>
 
     </footer><!--=== End Footer ===-->
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
@@ -101,22 +108,43 @@
     <script src="~/assets/js/wow.min.js"></script>
 
     <script src="~/assets/js/jquery.scrollmagic.min.js"></script>
-    
+
     <script src="~/assets/js/scripts.js"></script>
     <script src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
     <script src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
 
     <script src="~/assets/Documents/Factorial.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
     <script src="~/assets/js/losJs.js"></script>
 
     <script type="text/javascript">
         SyntaxHighlighter.all()
+    </script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            var token2 = @TempData["ValidateMess"];
+            if( token2 == 2)
+            {
+                window.location.hash = '#emailSection';
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            var token = @TempData["Message"];
+            if( token == 1)
+            {
+                swal('Your message has been sent!')
+            }
+        });
     </script>
 
     @RenderSection("scripts", required: false)
 
 
 </body>
+
+
 
 </html>
